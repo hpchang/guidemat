@@ -1,2 +1,2 @@
 # guidemat
-matlab guide
+matlab guide example to create GUI with sin, cos, tan plot
