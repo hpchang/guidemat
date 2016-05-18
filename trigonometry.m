@@ -112,10 +112,9 @@ function edit_value_Callback(hObject, eventdata, handles)
 % hObject    handle to edit_value (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-NewStr = get(hObject,'String');
-NewVal=str2double(NewStr);
-NewVal=round(NewVal);
-set(handles.slider_value, 'Value', NewVal)
+data = get(hObject, 'String');
+set(handles.slider_value, 'Value', str2num(data))
+
 
 
 % Hints: get(hObject,'String') returns contents of edit_value as text
