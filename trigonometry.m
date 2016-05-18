@@ -101,7 +101,11 @@ function push_plotfigure_Callback(hObject, eventdata, handles)
 % hObject    handle to push_plotfigure (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-
+value=get(handles.edit_value, 'string');
+aa=str2double(value);
+x=0:0.1:aa*pi;
+y=sin(x);
+plot(x,y);
 
 
 function edit_value_Callback(hObject, eventdata, handles)
