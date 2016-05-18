@@ -22,7 +22,7 @@ function varargout = trigonometry(varargin)
 
 % Edit the above text to modify the response to help trigonometry
 
-% Last Modified by GUIDE v2.5 18-May-2016 17:16:01
+% Last Modified by GUIDE v2.5 18-May-2016 17:28:35
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -59,7 +59,7 @@ handles.output = hObject;
 guidata(hObject, handles);
 
 % UIWAIT makes trigonometry wait for user response (see UIRESUME)
-% uiwait(handles.figure1);
+% uiwait(handles.figure_GUI);
 
 
 % --- Outputs from this function are returned to the command line.
@@ -73,19 +73,19 @@ function varargout = trigonometry_OutputFcn(hObject, eventdata, handles)
 varargout{1} = handles.output;
 
 
-% --- Executes on selection change in popupmenu1.
-function popupmenu1_Callback(hObject, eventdata, handles)
-% hObject    handle to popupmenu1 (see GCBO)
+% --- Executes on selection change in popup_color.
+function popup_color_Callback(hObject, eventdata, handles)
+% hObject    handle to popup_color (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: contents = cellstr(get(hObject,'String')) returns popupmenu1 contents as cell array
-%        contents{get(hObject,'Value')} returns selected item from popupmenu1
+% Hints: contents = cellstr(get(hObject,'String')) returns popup_color contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from popup_color
 
 
 % --- Executes during object creation, after setting all properties.
-function popupmenu1_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to popupmenu1 (see GCBO)
+function popup_color_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to popup_color (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -96,26 +96,26 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
 end
 
 
-% --- Executes on button press in pushbutton1.
-function pushbutton1_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton1 (see GCBO)
+% --- Executes on button press in push_plotfigure.
+function push_plotfigure_Callback(hObject, eventdata, handles)
+% hObject    handle to push_plotfigure (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
 
-function edit1_Callback(hObject, eventdata, handles)
-% hObject    handle to edit1 (see GCBO)
+function edit_value_Callback(hObject, eventdata, handles)
+% hObject    handle to edit_value (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit1 as text
-%        str2double(get(hObject,'String')) returns contents of edit1 as a double
+% Hints: get(hObject,'String') returns contents of edit_value as text
+%        str2double(get(hObject,'String')) returns contents of edit_value as a double
 
 
 % --- Executes during object creation, after setting all properties.
-function edit1_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit1 (see GCBO)
+function edit_value_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit_value (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -127,8 +127,8 @@ end
 
 
 % --- Executes on slider movement.
-function slider1_Callback(hObject, eventdata, handles)
-% hObject    handle to slider1 (see GCBO)
+function slider_value_Callback(hObject, eventdata, handles)
+% hObject    handle to slider_value (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
@@ -137,8 +137,8 @@ function slider1_Callback(hObject, eventdata, handles)
 
 
 % --- Executes during object creation, after setting all properties.
-function slider1_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to slider1 (see GCBO)
+function slider_value_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to slider_value (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
