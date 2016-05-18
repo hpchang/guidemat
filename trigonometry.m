@@ -104,7 +104,17 @@ function push_plotfigure_Callback(hObject, eventdata, handles)
 value=get(handles.edit_value, 'string');
 aa=str2double(value);
 x=0:0.1:aa*pi;
-y=sin(x);
+GThandle=get(handles.uipanel_graphic, 'Children'); 
+ck=cell2mat(get(GThandle, 'value')); 
+GT=get(GThandle(ck==1), 'string');
+switch GT
+    case 'Sine Wave'
+        y=sin(x);
+    case 'Cosine Wave'
+        y=cos(x);
+    case 'Tangent Wave'
+        y=tan(x);
+end
 plot(x,y);
 
 
