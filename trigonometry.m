@@ -81,6 +81,11 @@ function popup_color_Callback(hObject, eventdata, handles)
 
 % Hints: contents = cellstr(get(hObject,'String')) returns popup_color contents as cell array
 %        contents{get(hObject,'Value')} returns selected item from popup_color
+x=getappdata(handles.figure_GUI, 'xdata');
+y=getappdata(handles.figure_GUI, 'ydata');
+colortable=strvcat('ro','b--','gp','c*:','m<-.','y+--');
+index=get(handles.popup_color,'value');
+plot(x, y, colortable(index,:))
 
 
 % --- Executes during object creation, after setting all properties.
@@ -115,7 +120,13 @@ switch GT
     case 'Tangent Wave'
         y=tan(x);
 end
-plot(x,y);
+
+colortable=strvcat('ro','b--','gp','c*:','m<-.','y+--');   
+index=get(handles.popup_color,'value');
+
+plot(x, y, colortable(index,:))
+setappdata(handles.figure_GUI, 'xdata', x);
+setappdata(handles.figure_GUI, 'ydata', y);
 
 
 function edit_value_Callback(hObject, eventdata, handles)
